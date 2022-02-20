@@ -112,6 +112,7 @@ OFFSET_BINANCES2VT: Dict[Tuple[Direction, str], Offset] = {
 # 数据频率映射
 INTERVAL_VT2BINANCES: Dict[Interval, str] = {
     Interval.MINUTE: "1m",
+    Interval.FIVE_MINUTE: "5m",
     Interval.HOUR: "1h",
     Interval.DAILY: "1d",
 }
