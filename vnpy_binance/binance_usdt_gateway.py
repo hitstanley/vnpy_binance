@@ -120,6 +120,7 @@ INTERVAL_VT2BINANCES: Dict[Interval, str] = {
 # 时间间隔映射
 TIMEDELTA_MAP: Dict[Interval, timedelta] = {
     Interval.MINUTE: timedelta(minutes=1),
+    Interval.FIVE_MINUTE: timedelta(minutes=5),
     Interval.HOUR: timedelta(hours=1),
     Interval.DAILY: timedelta(days=1),
 }
