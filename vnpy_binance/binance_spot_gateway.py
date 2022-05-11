@@ -82,6 +82,7 @@ DIRECTION_BINANCE2VT: Dict[str, Direction] = {v: k for k, v in DIRECTION_VT2BINA
 # 数据频率映射
 INTERVAL_VT2BINANCE: Dict[Interval, str] = {
     Interval.MINUTE: "1m",
+    Interval.FIVE_MINUTE: "5m",
     Interval.HOUR: "1h",
     Interval.DAILY: "1d",
 }
@@ -89,6 +90,7 @@ INTERVAL_VT2BINANCE: Dict[Interval, str] = {
 # 时间间隔映射
 TIMEDELTA_MAP: Dict[Interval, timedelta] = {
     Interval.MINUTE: timedelta(minutes=1),
+    Interval.FIVE_MINUTE: timedelta(minutes=5),
     Interval.HOUR: timedelta(hours=1),
     Interval.DAILY: timedelta(days=1),
 }
@@ -638,6 +640,8 @@ class BinanceSpotRestAPi(RestClient):
                         interval=req.interval,
                         volume=float(row[5]),
                         turnover=float(row[7]),
+                        num_of_trades=int(row[8]),
+                        take_buy_volume=float(row[9]),
                         open_price=float(row[1]),
                         high_price=float(row[2]),
                         low_price=float(row[3]),
