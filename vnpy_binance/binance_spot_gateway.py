@@ -83,6 +83,7 @@ DIRECTION_BINANCE2VT: Dict[str, Direction] = {v: k for k, v in DIRECTION_VT2BINA
 INTERVAL_VT2BINANCE: Dict[Interval, str] = {
     Interval.MINUTE: "1m",
     Interval.FIVE_MINUTE: "5m",
+    Interval.FIFTEEN_MINUTE: "15m",
     Interval.HOUR: "1h",
     Interval.DAILY: "1d",
 }

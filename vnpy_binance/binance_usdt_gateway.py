@@ -113,6 +113,7 @@ OFFSET_BINANCES2VT: Dict[Tuple[Direction, str], Offset] = {
 INTERVAL_VT2BINANCES: Dict[Interval, str] = {
     Interval.MINUTE: "1m",
     Interval.FIVE_MINUTE: "5m",
+    Interval.FIFTEEN_MINUTE: "15m",
     Interval.HOUR: "1h",
     Interval.DAILY: "1d",
 }
